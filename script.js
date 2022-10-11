@@ -144,6 +144,23 @@ funcion=prompt("Que funcion quiere usar?(Del 1 al 15)","")
 
                                             }else{
                                                 if(funcion==13){
+                                                    elementos=prompt("Ingrese la cantidad de elementos de la serie fibonacci que quiere que aparezcan");
+                                                    var total=Array(Number(elementos));
+                                                    total=[0,1];
+                                                        for(i=2;i<Number(elementos);i++){
+                                                         total[i]=total[i-1]+total[i-2];
+                                                         }
+                                                          alert(""+total);
+                                                }else{
+                                                    if(funcion==14){
+
+                                                    }else{
+                                                        if(funcion==15){
+
+                                                        }else{
+                                                            alert("Por favor, ingrese un numero valido del 1 al 15");
+                                                        }
+                                                    }
                                                 }
                                             }
                                         }
