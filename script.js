@@ -101,26 +101,7 @@ funcion=prompt("Que funcion quiere usar?(Del 1 al 15)","")
                 alert("Promedio Hombres: "+tHombre+" Promedio Mujer: "+tMujer+" Promedio total: "+total);
             }else{
                 if(funcion==5){
-                    let menor;
-                    let x=1;
-                    cant=prompt("Ingrese la cantidad de numeros en total");
-                    for(i=0;i<cant;i++){
-                        numero=prompt("Ingrese un numero");
-                        if(x==1){
-                            menor=Number(numero);
-                            x++;
-                        }else{
-                            if(menor>=0||menor<=0){
-                                if(menor<Number(numero)){ 
-                                }else{
-                                    menor=Number(numero);          
-                                }
-                            }else{
-                                alert("Ingrese un numero valido");
-                            }
-                        }
-                    }
-                    alert("El numero menor es: "+menor);
+                    
                 }else{
                     if(funcion==6){
                         
