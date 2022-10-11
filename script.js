@@ -26,10 +26,48 @@ funcion=prompt("Que funcion quiere usar?(Del 1 al 15)","")
     }
  }else{
     if(funcion==2){
-
+        let total;
+        let porcentaje1=0;
+        let porcentaje2=0;
+        let porcentaje3=0;
+        let animal=prompt("De que animal quiere calcular el porcentaje? //h 1.Elefante, 2. Jirafa y 3.Chimpances");
+        if(animal=="1" || animal.toLowerCase()=="elefante"){
+            total=20;
+        }else{
+            if(animal=="2" || animal.toLowerCase()=="jirafa"){
+                total=15;
+            }else{
+                if(animal=="3" || animal.toLowerCase()=="chimpance"){
+                    total=40;
+                }else{
+                    alert("Por favor ingrese un numero o animal valido");
+                }
+            }
+        }
+        for(i=0; i< total; i++){
+            edad=prompt("Ingrese la edad del animal en números");
+            ConvEdad=Number(edad);
+            if(ConvEdad>=0 && ConvEdad<=1){
+                porcentaje1++;
+            }else{
+                if(ConvEdad>1 && ConvEdad<3){
+                    porcentaje2++;
+                }else{
+                    if(ConvEdad>=3){
+                        porcentaje3++;
+                    }else{
+                        alert("Ingrese una edad valida");
+                    }
+                }
+            }
+        }
+        porcentaje1=(porcentaje1/total)*100;
+        porcentaje2=(porcentaje2/total)*100;
+        porcentaje3=(porcentaje3/total)*100;
+        alert("Porcentaje de 0 a 1 años: "+porcentaje1+"%"+" Porcentaje entre 1 a 3 años: "+porcentaje2+"%"+" Porcentaje de animales mayores a 3 años: "+porcentaje3+"%")
     }else{
         if(funcion==3){
-            var pregunta=prompt("Cuantas horas trabaja el obrero a la semana?","");
+            let pregunta=prompt("Cuantas horas trabaja el obrero a la semana?","");
             if(Number(pregunta)<=40 &&Number(pregunta)>=0){
                     let pago=20*Number(pregunta);
                     alert("Al obrero se le paga: "+pago+" dolares a la semana");
@@ -42,16 +80,53 @@ funcion=prompt("Que funcion quiere usar?(Del 1 al 15)","")
                     }
         }else{
             if(funcion==4){
-
+                let total=0;
+                let cHombre=0;
+                let cMujer=0;
+                let tHombre=0;
+                let tMujer=0;
+                hombre=prompt("Ingrese cuantos hombres hay en el grupo");
+                for(i=0;i<hombre;i++){
+                    edadH=prompt("Ingrese la edad de los hombres")
+                    cHombre=cHombre+Number(edadH);
+                }
+                mujer=prompt("Ingrese cuantas mujeres hay en el grupo");
+                for(i=0;i<mujer;i++){
+                    edadM=prompt("Ingrese la edad de las mujeres")
+                    cMujer=cMujer+Number(edadM);
+                }
+                total=(cHombre+cMujer)/(Number(hombre)+Number(mujer));
+                tMujer=cMujer/Number(mujer);
+                tHombre=cHombre/Number(hombre);
+                alert("Promedio Hombres: "+tHombre+" Promedio Mujer: "+tMujer+" Promedio total: "+total);
             }else{
                 if(funcion==5){
-
+                    let menor;
+                    let x=1;
+                    cant=prompt("Ingrese la cantidad de numeros en total");
+                    for(i=0;i<cant;i++){
+                        numero=prompt("Ingrese un numero");
+                        if(x==1){
+                            menor=Number(numero);
+                            x++;
+                        }else{
+                            if(menor>=0||menor<=0){
+                                if(menor<Number(numero)){ 
+                                }else{
+                                    menor=Number(numero);          
+                                }
+                            }else{
+                                alert("Ingrese un numero valido");
+                            }
+                        }
+                    }
+                    alert("El numero menor es: "+menor);
                 }else{
                     if(funcion==6){
-
+                        
                     }else{
                         if(funcion==7){
-
+                            
                         }else{
                             if(funcion==8){
 
@@ -69,17 +144,6 @@ funcion=prompt("Que funcion quiere usar?(Del 1 al 15)","")
 
                                             }else{
                                                 if(funcion==13){
-
-                                                }else{
-                                                    if(funcion==14){
-
-                                                    }else{
-                                                        if(funcion==15){
-
-                                                        }else{
-                                                            alert("Por favor, ingrese un numero valido del 1 al 15");
-                                                        }
-                                                    }
                                                 }
                                             }
                                         }
@@ -93,6 +157,7 @@ funcion=prompt("Que funcion quiere usar?(Del 1 al 15)","")
         }
     }
  }
+ alert("Para elegir de nuevo una funcion, refresque la pagina o presiona F5");
 
 
 
