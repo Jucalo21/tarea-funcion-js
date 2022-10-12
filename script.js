@@ -123,7 +123,25 @@ funcion=prompt("Que funcion quiere usar?(Del 1 al 15)","")
                     alert("El numero menor es: "+menor);
                 }else{
                     if(funcion==6){
-                        
+                        let promedio=0;
+                        let pesaje=0;
+                        let peso=0;
+                        ultima=prompt("Ingrese lo que peso la ultima reunion:"," ");
+                        for(i=1;i<=10;i++){
+                            basculas=prompt("Ingrese el peso de la bascula #"+i);
+                            pesaje=pesaje+Number(basculas);
+                        }
+                        promedio=pesaje/10;
+                        peso=promedio-Number(ultima);
+                        if(peso>0){
+                            alert("Usted subio "+peso+" kilos");
+                        }else{
+                            if(peso<0){
+                                alert("Usted bajo "+(-1*peso)+" kilos");
+                            }else{
+                                alert("Usted no bajo ni subio de peso");
+                            }
+                        }
                     }else{
                         if(funcion==7){
                             
@@ -138,7 +156,33 @@ funcion=prompt("Que funcion quiere usar?(Del 1 al 15)","")
 
                                     }else{
                                         if(funcion==11){
-
+                                            let suma=0;
+                                            let produc=1;
+                                            let promedio=0;
+                                            let cont=0;
+                                            valMin=prompt("Ingrese el valor min del intervalo a calcular");
+                                            valMax=prompt("Ingrese el valor max del intervalo a calcular");
+                                            numero=new Array(Number(valMax));
+                                            primo=[];
+                                            x=Number(valMin);
+                                            for(i=x;i<=numero.lenght;i++){
+                                                numero[cont]=i;
+                                                cont++;
+                                            }
+                                            for(k=0;k<numero.lenght;k++){
+                                                for(j=2;j<=numero[k];j++){
+                                                if(numero%i==0){
+                                                    primo.push(numero);
+                                                }
+                                            }
+                                        }
+                                            //for(i=0;i<=primo.length;i++){
+                                                //    suma=suma+primo[i];
+                                              //      produc=produc*primo[i];
+                                            //}
+                                            //promedio=suma/Number(valMax);
+                                            alert(""+primo)
+                                            //alert("Sumatoria= "+suma+" Productoria= "+produc+" Promedio= "+promedio);
                                         }else{
                                             if(funcion==12){
 
@@ -174,7 +218,7 @@ funcion=prompt("Que funcion quiere usar?(Del 1 al 15)","")
         }
     }
  }
- alert("Para elegir de nuevo una funcion, refresque la pagina o presiona F5");
+ //alert("Para elegir de nuevo una funcion, refresque la pagina o presiona F5");
 
 
 
