@@ -70,10 +70,10 @@ funcion=prompt("Que funcion quiere usar?(Del 1 al 15)","")
             let pregunta=prompt("Cuantas horas trabaja el obrero a la semana?","");
             if(Number(pregunta)<=40 &&Number(pregunta)>=0){
                     let pago=20*Number(pregunta);
-                    alert("Al obrero se le paga: "+pago+" dolares a la semana");
+                    alert("Al obrero se le paga $"+pago+" pesos a la semana");
                 }else{
                       if(Number(pregunta)>40){  let pago=20*40+(25*(Number(pregunta)-40));
-                        alert("Al obrero se le paga: "+pago+" dolares a la semana");
+                        alert("Al obrero se le paga $"+pago+" pesos a la semana");
                       }else{
                             alert("Ingrese un numero de horas validas");
                       }
@@ -154,7 +154,69 @@ funcion=prompt("Que funcion quiere usar?(Del 1 al 15)","")
                             alert("El total de la compra es $"+total+" pesos")
                         }else{
                             if(funcion==8){
-
+                                let totalD1=0;
+                                let totalD2=0;
+                                let totalD3=0;
+                                let totalD4=0;
+                                let totalD5=0;
+                                let total1=0
+                                let total2=0
+                                let total3=0
+                                let total4=0
+                                let total5=0
+                                let categoria1=0;
+                                let categoria2=0;
+                                let categoria3=0;
+                                let categoria4=0;
+                                let categoria5=0;
+                                boleta=prompt("Valor de la entrada");
+                                personas=prompt("Cuantas personas entraran en el teatro?");
+                                for(i=1;i<=Number(personas);i++){
+                                    edad=prompt("Que edad tiene la persona #"+i+"?");
+                                    descuento=0;
+                                    if(Number(edad)<5){
+                                        alert("Niños menores de 5 no pueden entrar");
+                                    }else{
+                                        if(Number(edad)>=5&&Number(edad)<=14){
+                                            descuento=Number(boleta)*0.35;
+                                            descuento=Number(boleta)-descuento;
+                                            totalD=totalD+descuento;
+                                            categoria1++;
+                                        }else{
+                                            if(Number(edad)>=15&&Number(edad)<=19){
+                                                descuento=Number(boleta)*0.25;
+                                                descuento=Number(boleta)-descuento;
+                                                totalD2=totalD2+descuento;
+                                                categoria2++;
+                                            }else{
+                                                if(Number(edad)>=20&&Number(edad)<=45){
+                                                    descuento=Number(boleta)*0.10;
+                                                    descuento=Number(boleta)-descuento;
+                                                    totalD3=totalD3+descuento;   
+                                                    categoria3++;                                                 
+                                                }else{
+                                                    if(Number(edad)>=46&&Number(edad)<=65){
+                                                        descuento=Number(boleta)*0.25;
+                                                        descuento=Number(boleta)-descuento;
+                                                        totalD4=totalD3+descuento;
+                                                        categoria4++;
+                                                    }else{
+                                                        descuento=Number(boleta)*0.35;
+                                                        descuento=Number(boleta)-descuento;
+                                                        totalD3=totalD3+descuento;
+                                                        categoria5++;
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                                total1=categoria1*Number(boleta);
+                                total2=categoria2*Number(boleta);
+                                total3=categoria3*Number(boleta);
+                                total4=categoria4*Number(boleta);
+                                total5=categoria5*Number(boleta);
+                                alert("El teatro deja de recibir $"+(total1-totalD1)+" por la categoria 1, $"+(total2-totalD2)+" por la categoria 2, $"+(total3-totalD3)+" por la categoria 3, $"+(total4-totalD4)+" por la categoria 4, $"+(total5-totalD5)+" por la categoria 5");
                             }else{
                                 if(funcion==9){
 
