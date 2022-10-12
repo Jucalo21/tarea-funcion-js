@@ -269,7 +269,17 @@ funcion=prompt("Que funcion quiere usar?(Del 1 al 15)","")
 
                                                     }else{
                                                         if(funcion==15){
-
+                                                            ano=1994
+                                                            paisA=25000000;
+                                                            paisB=19900000;
+                                                            diferencia=0;
+                                                            while(paisA>paisB){
+                                                                paisA=paisA+(paisA*0.02);
+                                                                paisB=paisB+(paisB*0.03);
+                                                                ano++;
+                                                            }
+                                                            diferencia=paisB-paisA;
+                                                            alert("En el año "+ano+" el pais B superara al pais A por un total de "+diferencia+" habitantes");
                                                         }else{
                                                             alert("Por favor, ingrese un numero valido del 1 al 15");
                                                         }
