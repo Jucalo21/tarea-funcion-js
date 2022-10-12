@@ -144,7 +144,14 @@ funcion=prompt("Que funcion quiere usar?(Del 1 al 15)","")
                         }
                     }else{
                         if(funcion==7){
-                            
+                            let total=0;
+                            totalArt=prompt("Cuantos articulos DISTINTOS compro?","");
+                            for(i=1;i<=Number(totalArt);i++){
+                                articulos=prompt("Cuanto cuesta el articulo #"+i+"?");
+                                cantArt=prompt("Cuantos articulos #"+i+" compro?");
+                                total=total+(Number(articulos)*Number(cantArt));
+                            }
+                            alert("El total de la compra es $"+total+" pesos")
                         }else{
                             if(funcion==8){
 
