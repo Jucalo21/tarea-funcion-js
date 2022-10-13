@@ -229,7 +229,33 @@ funcion=prompt("Que funcion quiere usar?(Del 1 al 15)","")
                                 alert("El teatro deja de recibir $"+(total1-totalD1)+" por la categoria 1, $"+(total2-totalD2)+" por la categoria 2, $"+(total3-totalD3)+" por la categoria 3, $"+(total4-totalD4)+" por la categoria 4, $"+(total5-totalD5)+" por la categoria 5");
                             }else{
                                 if(funcion==9){
-
+                                    vendedor=new Array(100);
+                                    ventas=new Array(100);
+                                    comision=new Array(100);
+                                    alert("Nota: tener en cuenta que las ventas fueron generadas mediante un metodo aleatorio para poder facilitar su implementacion");
+                                    for(i=0;i<100;i++){
+                                        ventas[i]=Math.floor(Math.random()*((200000001-10000000)+10000000));
+                                        if(Number(ventas[i])<=20000000){
+                                            comision[i]="10%";
+                                        }else{
+                                            if(Number(ventas[i]>20000000 && Number(ventas[i]<40000000))){
+                                                comision[i]="15%";
+                                            }else{
+                                                if(Number(ventas[i])<=40000000 && Number(ventas[i])<80000000){
+                                                    comision[i]="20%";
+                                                }else{
+                                                    if(Number(ventas[i])<=80000000 && Number(ventas[i])<1600000000){
+                                                        comision[i]="25%";
+                                                    }else{
+                                                        comision[i]="30%";
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                    for(i=0;i<100;i++){
+                                        alert("El vendedor #"+(i+1)+" vendio $"+ventas[i]+" pesos y tiene una comision del "+comision[i]);
+                                    }
                                 }else{
                                     if(funcion==10){
 
