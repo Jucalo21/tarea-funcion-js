@@ -1,29 +1,39 @@
 alert("Querido usuario, la informacion de las funciones se vera reflejada en varias pestañas emergentes");
 funcion=prompt("Que funcion quiere usar?(Del 1 al 15)","")
  if(funcion==1){
-    placa=prompt("Ingrese el numero de la placa del carro","");
-    ultNum=placa.substr(-1);
-    if(ultNum==1||ultNum==2){
-        color="Amarilla";
-        alert("El Color de la placa es "+color);
-    }else{
-        if(ultNum==3||ultNum==4){
-            color="Rosa";
-            alert("El Color de la placa es "+color);
+    let color1=0;
+    let color2=0;
+    let color3=0;
+    let color4=0;
+    let color5=0;
+    carros=prompt("Ingrese la cantidad de autos que entraron a la ciudad");
+    for(i=1;i<=Number(carros);i++){
+        placa=prompt("Ingrese el numero de la placa del carro #"+i+"");
+        ultNum=placa.substr(-1);
+        if(ultNum==1||ultNum==2){
+            color1=color1+1;
         }else{
-            if(ultNum==5||ultNum==6){
-                color="Roja";
-                alert("El Color de la placa es "+color);
+            if(ultNum==3||ultNum==4){
+                color2++;
             }else{
-                if(ultNum==7||ultNum==8){
-                    color="Verde";
-                    alert("El Color de la placa es "+color);
+                if(ultNum==5||ultNum==6){
+                    color3++;
                 }else{
-                        color="Azul";
-                        alert("El Color de la placa es "+color);                }
+                    if(ultNum==7||ultNum==8){
+                        color4++;
+                    }else{
+                        if(ultNum==9||ultNum==0){
+                            color5++;
+                        }else{
+                            alert("Ingrese un numero de placa valido")
+                            i--;
+                        }              
+                    }
+                }
             }
         }
     }
+    alert("De los "+Number(carros)+" autos que entraron "+color1+" tienen calcomanias amarillas, "+color2+" tienen calcomanias rosas, "+color3+" tienen calcomanias rojas, "+color4+" tienen calcomanias verdes y "+color5+" tienen calcomanias azules");
  }else{
     if(funcion==2){
         let total;
