@@ -258,7 +258,47 @@ funcion=prompt("Que funcion quiere usar?(Del 1 al 15)","")
                                     }
                                 }else{
                                     if(funcion==10){
-
+                                        let votos1=0;
+                                        let votos2=0;
+                                        let votos3=0;
+                                        alert("Nota: Los votos fueron generados aleatoriamente");
+                                        for(i=1;i<=50000;i++){
+                                            voto=Math.floor(Math.random()*((3-1)+1));
+                                            if(voto==1){
+                                                votos1++;
+                                            }else{
+                                                if(voto==2){
+                                                    votos2++;
+                                                }else{
+                                                    votos3++;
+                                                }
+                                            }
+                                        }
+                                        if(votos1>votos2 && votos1>votos3){
+                                            alert("El candidato 1 gano la votacion con un total de "+votos1+" votos, el candidato 2 obtuvo "+votos2+" votos, y el candidato 3 obtuvo "+votos3+" votos");
+                                        }else{
+                                            if(votos2>votos1 && votos2>votos3){
+                                                alert("El candidato 2 uno gano la votacion con un total de "+votos2+" votos, el candidato 1 obtuvo "+votos1+" votos, y el candidato 3 obtuvo "+votos3+" votos");
+                                            }else{
+                                                if(votos3>votos1 && votos3>votos2){
+                                                    alert("El candidato 3 uno gano la votacion con un total de "+votos3+" votos, el candidato 1 obtuvo "+votos1+" votos, y el candidato 2 obtuvo "+votos2+" votos");
+                                                }else{
+                                                    if(votos1==votos2 && votos1>votos3){
+                                                        alert("El candidato 1 y 2 empataron con un total de "+votos1+" votos, y el candidato 3 obtuvo "+votos3+" votos");
+                                                    }else{
+                                                        if(votos1=votos3 && votos1>votos2){
+                                                            alert("El candidato 1 y 3 empataron con un total de "+votos1+" votos, y el candidato 2 obtuvo "+votos2+" votos");
+                                                        }else{
+                                                            if(votos3==votos2 && votos3>votos1){
+                                                                alert("El candidato 2 y 3 empataron con un total de "+votos2+" votos, y el candidato 1 obtuvo "+votos1+" votos");
+                                                            }else{
+                                                                alert("Los 3 candidatos empataron con un total de "+votos3+" votos");
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
                                     }else{
                                         if(funcion==11){
                                             let suma=0;
