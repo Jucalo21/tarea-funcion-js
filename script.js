@@ -342,26 +342,26 @@ funcion=prompt("Que funcion quiere usar?(Del 1 al 15)","")
                                                           alert(""+total);
                                                 }else{
                                                     if(funcion==14){
-                                                        let numero1 = 0;
-                                                        let numero2 = 0;
-                                                        let a = 0;
-                                                        let b = 0;
+                                                        let numero1=0;
+                                                        let numero2=0;
+                                                        let a=0;
+                                                        let b=0;
                                                         let resultado = 0;
-                                                        numero1 = (prompt("Ingrese el primer numero"))
-                                                        numero2 = (prompt("Ingrese el segundo numero"))
-                                                        if (Number(numero1) > Number(numero2)) {
-                                                            a = Number(numero1);
-                                                            b = Number(numero2);
-                                                        } else {
-                                                            a = Number(numero2);
-                                                            b = Number(numero1);
+                                                        numero1=prompt("Ingrese el primer numero");
+                                                        numero2=prompt("Ingrese el segundo numero");
+                                                        if(Number(numero1)>Number(numero2)){
+                                                            a=Number(numero1);
+                                                            b=Number(numero2);
+                                                        }else{
+                                                            a=Number(numero2);
+                                                            b=Number(numero1);
                                                         }
-                                                        while (b != 0) {
-                                                            resultado = b;
-                                                            b = (a % b);
-                                                            a = resultado;
+                                                        while(b != 0){
+                                                            resultado=b;
+                                                            b=(a%b);
+                                                            a=resultado;
                                                         }
-                                                        alert("El Maximo Comun Divisor entre "+numero1+" y "+numero2+" es: "+resultado)                                                     
+                                                        alert("El Maximo Comun Divisor entre "+numero1+" y "+numero2+" es: "+resultado);                                                     
                                                     }else{
                                                         if(funcion==15){
                                                             ano=1994
