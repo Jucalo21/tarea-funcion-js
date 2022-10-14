@@ -267,7 +267,7 @@ funcion=prompt("Que funcion quiere usar?(Del 1 al 15)","")
                                             if(voto==1){
                                                 votos1++;
                                             }else{
-                                                if(voto==2){
+                                                if(voto == 2){
                                                     votos2++;
                                                 }else{
                                                     votos3++;
