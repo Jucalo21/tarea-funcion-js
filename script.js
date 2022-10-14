@@ -258,7 +258,47 @@ funcion=prompt("Que funcion quiere usar?(Del 1 al 15)","")
                                     }
                                 }else{
                                     if(funcion==10){
-
+                                        let votos1=0;
+                                        let votos2=0;
+                                        let votos3=0;
+                                        alert("Nota: Los votos fueron generados aleatoriamente");
+                                        for(i=1;i<=50000;i++){
+                                            voto=Math.floor(Math.random()*((3-1)+1));
+                                            if(voto==1){
+                                                votos1++;
+                                            }else{
+                                                if(voto==2){
+                                                    votos2++;
+                                                }else{
+                                                    votos3++;
+                                                }
+                                            }
+                                        }
+                                        if(votos1>votos2 && votos1>votos3){
+                                            alert("El candidato 1 gano la votacion con un total de "+votos1+" votos, el candidato 2 obtuvo "+votos2+" votos, y el candidato 3 obtuvo "+votos3+" votos");
+                                        }else{
+                                            if(votos2>votos1 && votos2>votos3){
+                                                alert("El candidato 2 uno gano la votacion con un total de "+votos2+" votos, el candidato 1 obtuvo "+votos1+" votos, y el candidato 3 obtuvo "+votos3+" votos");
+                                            }else{
+                                                if(votos3>votos1 && votos3>votos2){
+                                                    alert("El candidato 3 uno gano la votacion con un total de "+votos3+" votos, el candidato 1 obtuvo "+votos1+" votos, y el candidato 2 obtuvo "+votos2+" votos");
+                                                }else{
+                                                    if(votos1==votos2 && votos1>votos3){
+                                                        alert("El candidato 1 y 2 empataron con un total de "+votos1+" votos, y el candidato 3 obtuvo "+votos3+" votos");
+                                                    }else{
+                                                        if(votos1=votos3 && votos1>votos2){
+                                                            alert("El candidato 1 y 3 empataron con un total de "+votos1+" votos, y el candidato 2 obtuvo "+votos2+" votos");
+                                                        }else{
+                                                            if(votos3==votos2 && votos3>votos1){
+                                                                alert("El candidato 2 y 3 empataron con un total de "+votos2+" votos, y el candidato 1 obtuvo "+votos1+" votos");
+                                                            }else{
+                                                                alert("Los 3 candidatos empataron con un total de "+votos3+" votos");
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
                                     }else{
                                         if(funcion==11){
                                             let suma=0;
@@ -302,7 +342,26 @@ funcion=prompt("Que funcion quiere usar?(Del 1 al 15)","")
                                                           alert(""+total);
                                                 }else{
                                                     if(funcion==14){
-
+                                                        let numero1 = 0;
+                                                        let numero2 = 0;
+                                                        let a = 0;
+                                                        let b = 0;
+                                                        let resultado = 0;
+                                                        numero1 = (prompt("Ingrese el primer numero"))
+                                                        numero2 = (prompt("Ingrese el segundo numero"))
+                                                        if (Number(numero1) > Number(numero2)) {
+                                                            a = Number(numero1);
+                                                            b = Number(numero2);
+                                                        } else {
+                                                            a = Number(numero2);
+                                                            b = Number(numero1);
+                                                        }
+                                                        while (b != 0) {
+                                                            resultado = b;
+                                                            b = (a % b);
+                                                            a = resultado;
+                                                        }
+                                                        alert("El Maximo Comun Divisor entre "+numero1+" y "+numero2+" es: "+resultado)                                                     
                                                     }else{
                                                         if(funcion==15){
                                                             ano=1994
@@ -333,7 +392,7 @@ funcion=prompt("Que funcion quiere usar?(Del 1 al 15)","")
         }
     }
  }
- //alert("Para elegir de nuevo una funcion, refresque la pagina o presiona F5");
+ alert("Para elegir de nuevo una funcion, refresque la pagina o presiona F5");
 
 
 
