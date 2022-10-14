@@ -349,7 +349,7 @@ funcion=prompt("Que funcion quiere usar?(Del 1 al 15)","")
                                                         let resultado=0;
                                                         numero1=prompt("Ingrese el primer numero");
                                                         numero2=prompt("Ingrese el segundo numero");
-                                                        if (Number(numero1)>Number(numero2)){
+                                                        if (Number(numero1) > Number(numero2)){
                                                             a=Number(numero1);
                                                             b=Number(numero2);
                                                         }else{
