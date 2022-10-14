@@ -392,7 +392,7 @@ funcion=prompt("Que funcion quiere usar?(Del 1 al 15)","")
         }
     }
  }
- alert("Para elegir de nuevo una funcion, refresque la pagina o presiona F5");
+ alert("Para elegir de nuevo una funcion, refresque la pagina o presiona F5 ");
 
 
 
